@@ -1,0 +1,138 @@
+:root{
+   /* Colors*/
+
+/* Primary*/
+
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+/* Neutral*/
+
+--Grey-500: hsl(234, 12%, 34%);
+--Grey-400: hsl(212, 6%, 44%);
+--White: hsl(0, 0%, 100%);
+
+/* font-size*/
+font-size: 15px;
+}
+
+@font-face {
+    font-family: "poppins";
+    src: url(./Poppins/Poppins-Light.ttf);
+    font-weight: 200;
+}
+@font-face {
+    font-family: poppins;
+    src: url(./Poppins/Poppins-Regular.ttf);
+    font-weight:500;
+}
+@font-face {
+    font-family: poppins;
+    src: url(./Poppins/Poppins-SemiBold.ttf);
+    font-weight: 600;
+}
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    
+    font-family: poppins;
+}
+
+
+/* font styling */
+h1, .delivery-note, header-2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+h1, .header-2{
+    color: var(--Grey-500);
+
+}
+.delivery-note{
+    font-weight: 200;
+    color:var(--Grey-400)
+}
+.ai-brief{
+    font-size: 1rem;
+    padding:1rem;
+    text-align: center;
+}
+
+/* div styling */
+
+header,
+section {
+    width: 100%;
+    max-width: 350px;
+    margin: 2rem auto;
+}
+header{
+    margin-top:3rem;
+}
+section{
+    
+    border-radius: 10px;
+    padding:1rem 2rem;
+    text-align: left;
+    box-shadow:1px 1px 10px 5px #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+/*border top color*/
+.supervisor{
+    border-top:4px solid var(--Cyan);
+}
+.team-builder{
+    border-top:4px solid var(--Red);
+}
+.karma{
+    border-top:4px solid var(--Orange);
+}
+.calculator{
+    border-top:4px solid var(--Blue);
+}
+
+/* image size and align*/
+
+.section-img{
+    max-width:5em;
+    align-self: end;
+}
+
+
+
+@media only screen and (min-width:700px){
+    main{
+        display: grid;
+        grid-template-areas: '. . team team . .'
+                ' supervisor supervisor team team calculator calculator '
+                'supervisor supervisor karma karma calculator calculator'
+                '. . karma karma . .';
+        gap: 2rem;
+        width:100%;
+        padding: 0 2rem;
+        
+}
+.supervisor{
+    grid-area: supervisor;
+}
+.team-builder{
+    grid-area: team;
+}
+.karma{
+    grid-area: karma;
+}
+.calculator{
+    grid-area: calculator;
+}
+section{
+    max-width: 30rem;
+}
+}
+
+
